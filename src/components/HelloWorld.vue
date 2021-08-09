@@ -1,89 +1,88 @@
 <template>
-  <div class="hello">
-     <h2>
-  <span>프론트엔드 개발자</span>  
-  <span class="light">박병근</span> 
-  <span> even in</span> 
-  <span>the darkest</span>  
-  <span>places</span>
-</h2>
+
+  <div id="hello" >
+   
+   <div class="logo" @mousemove="move(e)">
+    MOVE MOUSE
+  </div>  
+ 
   </div>
+
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+         methods:{
+           move:function(e){
+              let body = document.getElementById('.hello');
+  let circle = document.createElement('span');
+  let x = e.offsetX;
+  let y = e.offsetY;
+  circle.style.left = x + "px";
+  circle.style.top = y + "px";
+  let size = Math.random() * 100;
+  circle.style.width = 20 + size + "px";
+  circle.style.height = 20 + size + "px";
+  body.appendChild(circle);
+  setTimeout(function() {
+    circle.remove();
+  }, 1800);
+           }
+             
+           }
+        }
+      
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello{
-  height: 937px;
-  background: #000;
- 
-}
-body {
-  background: #000;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-  font-family: 'Arial';
+#hello {
+  overflow: hidden;
+  background: #55b9f3;
+  height: 100vh; 
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
   color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 0.75;
+  font-size: 50px;
 }
 
 span {
-  display: block;
-  text-align: left;
-  clear: both;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  pointer-events: none;
+  background: #55b9f3;
+  box-shadow:  20px 20px 60px #489dcf, 
+             -20px -20px 60px #62d5ff;
+  transform: translate(-50%, -50%);
+  animation: blow 4s linear infinite;
 }
 
-span:not(.light) {
-  opacity: 0;
-  animation: flashText .6s ease-out alternate infinite;
-}
 
-span.light {
-  position: relative;
-  display: inline-block;
-  float:left;
-  
-}
-  span.light:before {
-    position: absolute;
-    left: 0;
-    top: -10%;
-    width: 100%;
-    height: 120%;
-    background: #fff;
-    filter: blur(10px);
-    content: "";
-    opacity: 0;
-    animation: flash .6s ease-out alternate infinite;
-   
-  
-}
-
-@keyframes flash{
-  to {
+@keyframes blow {
+  0% {
+    transform: translate(-50%, -50%);
     opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
   }
 }
-
-@keyframes flashText {
-  to {
-    opacity: 0.3;
-  }
-}
-
-
 
 </style>
