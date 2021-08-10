@@ -1,6 +1,7 @@
 <template>
     <div>
         <h3>글쓰기</h3>
+        
         <hr/>
         <!-- <div class="wrap">
         <label>제목:</label><input type="text"  class="text1"

@@ -1,18 +1,22 @@
 <template>
-    <div>
+    <div class="app">
         
           
         <el-container>
           <el-header>
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-              <el-menu-item index="1">홈으로</el-menu-item>
+            <el-menu :default-active="activeIndex" background-color="#1B1D1F"  active-text-color="#fff" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+                 <el-menu-item index="1" default-active="black">홈으로</el-menu-item>
+             
+            
               <el-menu-item index="2" >게시판목록</el-menu-item>
-              <el-menu-item index="3" >게시판글쓰기</el-menu-item>
+             <el-menu-item index="3" >게시판글쓰기</el-menu-item>
             </el-menu>
           </el-header>
 
           <el-main>
-            <router-view></router-view>
+               
+      <router-view />
+ 
           </el-main>
 
           <el-footer>
@@ -21,7 +25,7 @@
           </el-footer>
         </el-container>
 
-    </div>
+ </div>
 </template>
 
 <script>
@@ -52,49 +56,25 @@ export default {
 </script>
   
 <style>
-  *{
-    margin:0px;
-    padding:0px;
-    background: #1B1D1F!important;
-  }
+*{
+  margin:0px;
+  padding:0px;
+}
+.el-header {
+   padding: 0!important;
+   background: #1B1D1F;
+    }
+    .el-main{
+      padding: 0!important;;
+      margin:0!important;
+    }
+    .el-menu{
+      border-bottom:none!important;
+      float:right;
+    }
 
 
 
 
-  /* ----------element ------------------- */
-  .el-menu-demo{
-    
-    border: none!important;
-  }
-  
 
-  .el-header, .el-footer {
-    /*background-color: #B3C0D1;*/
-    color: #1B1D1F;
-    background: #1B1D1F;
-    text-align: center;
-    line-height: 60px;
-  }
-
-
-  .el-main {
-    /* background-color: #E9EEF3; */
-    color: #333;
-    text-align: center;
-    padding:0!important;
-    margin:0!important;
-  }
-
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
-  }
 </style>
