@@ -1,6 +1,8 @@
 // 파일명 : routes/index.js
 import {createWebHashHistory, createRouter} from 'vue-router';
 
+
+
 // 화면에 표시할 컴포넌트 가져오기
 import HelloWorld from '@/components/HelloWorld.vue';
 import Menu1 from '@/components/Menu1.vue';
