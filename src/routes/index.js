@@ -1,5 +1,5 @@
 // 파일명 : routes/index.js
-import {createWebHashHistory, createRouter} from 'vue-router';
+import { createWebHistory, createRouter } from 'vue-router';
 
 
 
@@ -21,7 +21,7 @@ const routes = [
 
 // route 적용
 const router = createRouter({
-    history : createWebHashHistory(),
+    history: createWebHistory(),
     routes,
 });
 export default router;
