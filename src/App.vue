@@ -1,17 +1,14 @@
 <template>
   <div class="app">
-    
     <el-container>
-      <div class="wrap"><img src="../src\assets\logo2.png" class="logo"></div>
+      <div class="wrap"><img src="../src\assets\logo2.png" class="logo" /></div>
       <el-header>
         <el-menu
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
-         
         >
-       
           <el-menu-item index="1" v-bind:class="on">홈으로</el-menu-item>
           <el-menu-item index="2" v-bind:class="on1">게시판목록</el-menu-item>
           <el-menu-item index="3" v-bind:class="on2">게시판글쓰기</el-menu-item>
@@ -19,7 +16,6 @@
           <el-menu-item index="5">로그인</el-menu-item>
           <el-menu-item index="6">마이페이지</el-menu-item>
           <el-menu-item index="7">Seller</el-menu-item>
-         
         </el-menu>
       </el-header>
       <div class="hr"></div>
@@ -105,22 +101,21 @@ export default {
   
 <style>
 /* ----------element ------------------- */
-*{
+* {
   padding: 0;
-  margin:0;
+  margin: 0;
 }
-.app{
-  padding:0;
-  margin:0;
+.app {
+  padding: 0;
+  margin: 0;
 }
-.el-menu-demo{
+.el-menu-demo {
   display: inline-block;
-  border-bottom: none!important;
+  border-bottom: none !important;
 }
-.hr{
+.hr {
   border-bottom: 1px solid #ccc;
 }
-
 
 .el-header,
 .el-footer {
@@ -128,16 +123,15 @@ export default {
   color: #333;
   text-align: center;
   line-height: 60px;
-  padding:0!important;
- 
-  
-
+  padding: 0 !important;
 }
 
 .el-main {
   /* background-color: #E9EEF3; */
   color: #333;
   text-align: center;
+  padding: 0 !important;
+  margin: 0;
 }
 
 body > .el-container {
@@ -152,12 +146,11 @@ body > .el-container {
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }
-.logo{
-  width:80px;
-   margin-top:30px;
+.logo {
+  width: 80px;
+  margin-top: 30px;
 }
-.wrap{
+.wrap {
   text-align: center;
- 
 }
 </style>
