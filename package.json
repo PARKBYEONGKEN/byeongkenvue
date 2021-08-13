@@ -14,10 +14,13 @@
     "vue": "^3.0.0",
     "vue-glitched-writer": "^1.2.2",
     "vue-router": "^4.0.10",
+    "vue-slick-carousel": "^1.0.6",
     "vue-typer": "^1.2.0",
     "vue-typewriter": "^2.2.1",
     "vue-typical": "^1.6.2",
-    "vue1": "^1.0.1"
+    "vue1": "^1.0.1",
+    "vue3-carousel": "^0.1.24",
+    "vueperslides": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

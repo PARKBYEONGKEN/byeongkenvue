@@ -10,12 +10,28 @@
       </el-carousel-item>
     </el-carousel>
     <div class="a1">12331</div>
+
+    <vueper-slides
+      class="no-shadow"
+      :visible-slides="3"
+      slide-multiple
+      :gap="3"
+      :slide-ratio="1 / 4"
+      :dragging-distance="200"
+      v-bind:autoplay="true"
+      :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+    >
+      <vueper-slide v-for="i in 10" :key="i" :title="i.toString()" />
+    </vueper-slides>
   </div>
 </template>
 
 
 <script>
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 export default {
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       viewd: "",
@@ -39,7 +55,6 @@ export default {
       ],
     };
   },
-  components: {},
 };
 </script>
 

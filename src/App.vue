@@ -15,7 +15,7 @@
           <el-menu-item index="4" v-bind:class="on3">회원가입</el-menu-item>
           <el-menu-item index="5">로그인</el-menu-item>
           <el-menu-item index="6">마이페이지</el-menu-item>
-          <el-menu-item index="7">Seller</el-menu-item>
+          <el-menu-item index="7" class="right1">Seller</el-menu-item>
         </el-menu>
       </el-header>
       <div class="hr"></div>
@@ -152,5 +152,9 @@ body > .el-container {
 }
 .wrap {
   text-align: center;
+}
+.right1 {
+  float: left;
+  display: inline-block;
 }
 </style>
